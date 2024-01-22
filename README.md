@@ -1,10 +1,11 @@
-# hasktags
-A tool to generate tag files for vim and emacs
+# hasktags (with daml support)
+A tool to generate tag files for vim and emacs. Forked from [MarcWeber/hasktags](https://github.com/MarcWeber/hasktags) to add support for [daml](https://docs.daml.com/).
 
 What is it for? A tag file is a index containing key items of your project such as
 - function names
 - module names
 - data declarations
+- *daml templates and choices*
 - ...
 
 So that you can find / jump to them fast.
