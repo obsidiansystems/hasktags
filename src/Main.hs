@@ -100,7 +100,7 @@ options = Options
     suffixes = option auto $
          long "suffixes"
       <> short 'S'
-      <> value [".hs", ".lhs", ".hsc"]
+      <> value [".hs", ".lhs", ".hsc", ".daml"]
       <> showDefault
       <> help "list of hs suffixes including \".\""
 

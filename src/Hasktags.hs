@@ -405,6 +405,10 @@ findstuff tokens@(Token "pattern" _ : Token name pos : Token "::" _ : sig) _ =
 findstuff tokens@(Token "pattern" _ : Token name pos : xs) scope =
         trace_ "findstuff pattern" tokens $
         FoundThing FTPattern name pos : findstuff xs scope
+findstuff (Token "template" _ : Token name p : _) scope =
+  [FoundThing (FTFuncImpl scope) name p]
+findstuff (Token "choice" _ : Token name p : _) scope =
+  [FoundThing (FTFuncImpl scope) name p]
 findstuff xs scope =
   trace_ "findstuff rest " xs $
   findFunc xs scope ++ findFuncTypeDefs [] xs scope
